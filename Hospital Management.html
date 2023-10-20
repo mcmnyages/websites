@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Neema Hospital</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="Hospital Management.css" />
+  </head>
+
+  <body>
+    <header class="w3-aqua">
+      <i class="fa fa-bars w3-xxxlarge w3-right"></i>
+      <nav></nav>
+    </header>
+    <h1 class="w3-center w3-teal">Hospital Management</h1>
+    <div class="w3-container w3-card-4 w3-border-black" id="form">
+      <h2 class="w3-center w3-amber">Patient Details</h2>
+      <form action="" class="w3-form" id="myForm">
+        <label for="patientid">Patient ID</label>
+        <input
+          type="text"
+          name="PatientID"
+          id="pid"
+          class="w3-input"
+          required
+        /><br />
+        <label for="name">Patient Name</label>
+        <input
+          type="text"
+          name="PatientName"
+          id="name"
+          class="w3-input"
+          required
+        /><br />
+        <label for="gender">Patient Gender</label>
+        <select name="gender" id="gender" required class="w3-input">
+          <option value="">Select gender</option>
+          <option value="M" class="w3-input w3-red">Male</option>
+          <option value="F" class="w3-input w3-green">Female</option>
+          <option value="O" class="w3-pink">Other</option></select
+        ><br />
+        <label for="DOB">Patient Date of Birth</label>
+        <input type="date" name="DOB" id="dob" class="w3-input" required />
+        <input
+          type="submit"
+          disabled
+          class="w3-input w3-black w3-hover-aqua"
+          id="submitButton"
+        />
+      </form>
+    </div>
+    <script>
+      // Get form element and submit button
+      const form = document.getElementById("myForm");
+      const submitButton = document.getElementById("submitButton");
+
+      // Add event listener on form submission
+      form.addEventListener("input", function () {
+        if (form.checkValidity()) {
+          submitButton.disabled = false;
+        } else {
+          submitButton.disabled = true;
+        }
+      });
+    </script>
+    <a href="www.maseno.ac.ke">Here</a>
+  </body>
+</html>
