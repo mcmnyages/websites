@@ -18,7 +18,12 @@
     <h1 class="w3-center w3-teal">Hospital Management</h1>
     <div class="w3-container w3-card-4 w3-border-black" id="form">
       <h2 class="w3-center w3-amber">Patient Details</h2>
-      <form action="" class="w3-form" id="myForm">
+      <form
+        action="http://localhost/Databases/neema%20database.php"
+        class="w3-form"
+        method="post"
+        id="myForm"
+      >
         <label for="patientid">Patient ID</label>
         <input
           type="text"
@@ -36,22 +41,22 @@
           required
         /><br />
         <label for="gender">Patient Gender</label>
-        <select name="gender" id="gender" required class="w3-input">
-          <option value="">Select gender</option>
+        <select name="gender" id="gender" value="" required class="w3-input">
+          <option value="" selected hidden>Select gender</option>
           <option value="M" class="w3-input w3-red">Male</option>
           <option value="F" class="w3-input w3-green">Female</option>
           <option value="O" class="w3-pink">Other</option></select
         ><br />
         <label for="DOB">Patient Date of Birth</label>
         <input type="date" name="DOB" id="dob" class="w3-input" required />
-        <input
-          type="submit"
-          disabled
-          class="w3-input w3-black w3-hover-aqua"
-          id="submitButton"
-        />
+        <input type="submit" disabled class="w3-input" id="submitButton" />
       </form>
     </div>
+    <button class="w3-button w3-center" id="dbBtn">
+      <a href="http://localhost/Databases/neema%20database.php"
+        >See the database</a
+      >
+    </button>
     <script>
       // Get form element and submit button
       const form = document.getElementById("myForm");
@@ -66,6 +71,5 @@
         }
       });
     </script>
-    <a href="www.maseno.ac.ke">Here</a>
   </body>
 </html>
